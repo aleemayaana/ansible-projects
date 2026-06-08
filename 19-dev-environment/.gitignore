@@ -1,0 +1,35 @@
+# 19-dev-environment
+
+Edit \playbook.yml\ and customize \ars/common.yml\ and \inventory.ini\
+
+## Quick Start
+
+1. Update inventory.ini
+2. Customize vars/
+3. Run: ansible-playbook -i inventory.ini playbook.yml
+
+## Prerequisites
+
+- Ansible 2.9+
+- Python 3.6+
+
+## Usage
+
+\\\ash
+# Dry-run
+ansible-playbook -i inventory.ini playbook.yml --check
+
+# Full execution
+ansible-playbook -i inventory.ini playbook.yml
+
+# Verbose
+ansible-playbook -i inventory.ini playbook.yml -vvv
+\\\
+"@ | Set-Content "19-dev-environment/README.md"; 
+  @"
+*.retry
+*.log
+__pycache__/
+*.pyc
+.venv/
+venv/

@@ -1,0 +1,13 @@
+---
+- name: File Synchronization & Replication
+  hosts: all
+  become: yes
+  gather_facts: true
+
+  vars_files:
+    - vars/common.yml
+
+  roles:
+    - rsync-setup
+    - git-config
+    - replication

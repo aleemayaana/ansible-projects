@@ -1,0 +1,13 @@
+---
+- name: User & Access Management
+  hosts: all
+  become: yes
+  gather_facts: true
+
+  vars_files:
+    - vars/common.yml
+
+  roles:
+    - ad-ldap-setup
+    - user-provisioning
+    - rbac-config

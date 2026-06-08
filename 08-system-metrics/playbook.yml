@@ -1,0 +1,13 @@
+---
+- name: System Metrics Collection
+  hosts: all
+  become: yes
+  gather_facts: true
+
+  vars_files:
+    - vars/common.yml
+
+  roles:
+    - telegraf-install
+    - metrics-config
+    - dashboard-setup

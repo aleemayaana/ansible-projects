@@ -1,0 +1,4 @@
+---
+# Common variables
+project_name: 18-container-registry
+environment: production

@@ -1,0 +1,13 @@
+---
+- name: Development Environment Provisioning
+  hosts: all
+  become: yes
+  gather_facts: true
+
+  vars_files:
+    - vars/common.yml
+
+  roles:
+    - ide-install
+    - dev-tools
+    - repo-setup

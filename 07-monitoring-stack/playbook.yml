@@ -1,0 +1,13 @@
+---
+- name: Monitoring Stack Deployment
+  hosts: all
+  become: yes
+  gather_facts: true
+
+  vars_files:
+    - vars/common.yml
+
+  roles:
+    - prometheus-install
+    - grafana-setup
+    - alerting-config

@@ -1,0 +1,14 @@
+---
+- name: Docker Container Orchestration
+  hosts: all
+  become: yes
+  gather_facts: true
+
+  vars_files:
+    - vars/common.yml
+
+  roles:
+    - base-setup
+    - docker-install
+    - compose-deploy
+    - registry

@@ -1,0 +1,13 @@
+---
+- name: Backup & Disaster Recovery
+  hosts: all
+  become: yes
+  gather_facts: true
+
+  vars_files:
+    - vars/common.yml
+
+  roles:
+    - backup-agent
+    - scheduling
+    - restore-testing

@@ -1,0 +1,4 @@
+---
+# Common variables
+project_name: 15-incident-response
+environment: production

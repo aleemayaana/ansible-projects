@@ -1,0 +1,4 @@
+---
+# Common variables
+project_name: 07-monitoring-stack
+environment: production

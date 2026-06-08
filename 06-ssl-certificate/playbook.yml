@@ -1,0 +1,13 @@
+---
+- name: SSL Certificate Automation
+  hosts: all
+  become: yes
+  gather_facts: true
+
+  vars_files:
+    - vars/common.yml
+
+  roles:
+    - cert-generation
+    - cert-distribution
+    - renewal-automation

@@ -1,0 +1,12 @@
+---
+- name: Web Server Hardening & Load Balancing
+  hosts: all
+  become: yes
+  gather_facts: true
+
+  vars_files:
+    - vars/common.yml
+
+  roles:
+    - role1
+    - role2

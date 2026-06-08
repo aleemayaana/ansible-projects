@@ -1,0 +1,4 @@
+---
+# Common variables
+project_name: 20-testing-infra
+environment: production

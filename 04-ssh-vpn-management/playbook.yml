@@ -1,0 +1,14 @@
+---
+- name: SSH & VPN Access Management
+  hosts: all
+  become: yes
+  gather_facts: true
+
+  vars_files:
+    - vars/common.yml
+
+  roles:
+    - ssh-keys
+    - bastion-setup
+    - vpn-server
+    - user-mgmt

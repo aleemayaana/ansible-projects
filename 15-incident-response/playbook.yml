@@ -1,0 +1,13 @@
+---
+- name: Incident Response Automation
+  hosts: all
+  become: yes
+  gather_facts: true
+
+  vars_files:
+    - vars/common.yml
+
+  roles:
+    - threat-detection
+    - log-collection
+    - isolation-procedures

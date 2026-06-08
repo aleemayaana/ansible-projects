@@ -1,0 +1,14 @@
+---
+- name: Multi-Tier Application Deployment
+  hosts: all
+  become: yes
+  gather_facts: true
+
+  vars_files:
+    - vars/common.yml
+
+  roles:
+    - frontend-setup
+    - app-server
+    - database-init
+    - networking

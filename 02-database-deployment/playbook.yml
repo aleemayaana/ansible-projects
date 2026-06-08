@@ -1,0 +1,14 @@
+---
+- name: Database Deployment & Backup
+  hosts: all
+  become: yes
+  gather_facts: true
+
+  vars_files:
+    - vars/common.yml
+
+  roles:
+    - base-setup
+    - database-install
+    - replication
+    - backups

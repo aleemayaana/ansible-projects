@@ -1,0 +1,13 @@
+---
+- name: Kubernetes Cluster Setup
+  hosts: all
+  become: yes
+  gather_facts: true
+
+  vars_files:
+    - vars/common.yml
+
+  roles:
+    - k8s-install
+    - networking-setup
+    - rbac-config
